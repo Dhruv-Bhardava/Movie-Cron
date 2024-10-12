@@ -3,7 +3,16 @@ import { CustomContext } from "./context/AppContext";
 import { Link } from "react-router-dom";
 
 const Movies = () => {
-  const { movies } = CustomContext();
+  const { movies, isLoading } = CustomContext();
+
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center h-screen bg-gray-900 text-white">
+        <div className="animate-spin h-14 w-14 rounded-full border-8 border-white border-b-indigo-600"></div>
+        <p className="text-center text-lg mt-3 ml-2">Loading...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-screen-xl m-auto  p-8 rounded-md">

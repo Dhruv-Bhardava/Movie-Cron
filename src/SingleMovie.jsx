@@ -6,7 +6,7 @@ const SingleMovie = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const { isError, setIsError } = CustomContext();
-  const [movie, setMovie] = useState(null);
+  const [movie, setMovie] = useState("");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const SingleMovie = () => {
           setIsError({ show: true, msg: data.Error });
         }
       } catch (error) {
-        setIsError({ show: true, msg: "Failed to fetch movie details." });
+        console.log(error);
       } finally {
         setLoading(false);
       }
