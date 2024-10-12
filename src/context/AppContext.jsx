@@ -40,14 +40,7 @@ export const AppProvider = ({ children }) => {
     return () => clearTimeout(timeout);
   }, [query]);
 
-  if (isLoading) {
-    return (
-      <div className="flex justify-center items-center h-screen bg-gray-900 text-white">
-        <div className="animate-spin h-14 w-14 rounded-full border-8 border-white border-b-indigo-600"></div>
-        <p className="text-center text-lg mt-3 ml-2">Loading...</p>
-      </div>
-    );
-  }
+
 
   return (
     <AppContext.Provider
