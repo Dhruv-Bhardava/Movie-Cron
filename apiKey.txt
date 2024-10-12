@@ -1,3 +1,0 @@
-http://www.omdbapi.com/?apikey=10486d20&s=titanic
-
-http://www.omdbapi.com/?apikey=6c8d41e0&s=titanic
